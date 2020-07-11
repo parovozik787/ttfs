@@ -1,0 +1,11 @@
+include images/icon
+header.header
+  .header__container.container
+    .logo
+      a.logo__link(href="#", alt="Logotype")
+      +logo
+    .profile-box
+      - var name = 'Arthur Wood';
+      a.profile-box__name(href="#", alt="Profile link")= name
+      .profile-box__avatar
+        img(alt="Avatar", src="../../components/Header/images/avatar.png")
