@@ -1,11 +1,34 @@
-include images/icon
+include images/icons
 header.header
   .header__container.container
     .logo
       a.logo__link(href="#", alt="Logotype")
       +logo
     .profile-box
-      - var name = 'Arthur Wood';
-      a.profile-box__name(href="#", alt="Profile link")= name
-      .profile-box__avatar
-        img(alt="Avatar", src="../../components/Header/images/avatar.png")
+      .profile-box__user-data-wrapper
+        - var name = 'Arthur Wood';
+        a.profile-box__name(href="#", alt="Profile link")= name
+        .profile-box__avatar
+          img(alt="Avatar", src="../../components/Header/images/avatar.png")
+        button.profile-box__arrow
+          +profile-arrow
+      .profile-box__links-container
+        .profile-box__link-box
+          a(href="#", alt="Notifications")
+            +profile-notifications-icon
+        .profile-box__link-box
+          a(href="#", alt="Gift")
+            +profile-gift-icon
+        .profile-box__link-box
+          a(href="#", alt="Medium")
+            +profile-medium-icon
+  .header__nav-container.container
+    nav.nav
+      ul.nav__list
+        li
+          a.nav__link.nav__link--active(href="#", alt="Feed") Feed
+        li
+          a.nav__link(href="#", alt="Explore") Explore
+        li
+          a.nav__link(href="#", alt="Discussions") Discussions
+    button.action-button.header__action-button
