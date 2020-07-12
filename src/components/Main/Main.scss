@@ -1,0 +1,203 @@
+.main-page{
+	padding-top: 72px;
+
+	background-color: $color-main-background;
+	}
+
+
+.user-block{
+	position: relative;
+
+	width: 100%;
+	max-width: 350px;
+
+	color: $color-profile;
+	&__profile{
+		display: flex;
+		justify-content: space-between;
+
+		max-width: 85.71%;
+		margin-bottom: 33px;
+		}
+	&__avatar-wrapper{
+		flex: 0 0 40%;
+
+		max-width: 40%;
+		}
+	&__avatar{
+		position: relative;
+
+		overflow: hidden;
+
+		width: 100%;
+		padding-top: 100%;
+
+		border-radius: 50%;
+		& img{
+			position: absolute;
+			top: 0;
+
+			width: 100%;
+			height: 100%;
+			}
+		}
+	&__info{
+		flex: 0 0 156px;
+		//max-width: 156px;
+		}
+	&__name{
+		margin-bottom: 8px;
+
+		font-family: "Montserrat", sans-serif;
+		font-size: 24px;
+		font-weight: 600;
+		line-height: 26px;
+		}
+	&__nickname{
+		margin-bottom: 16px;
+
+		letter-spacing: -0.5px;
+
+		line-height: 20px;
+		}
+	&__edit-profile-button{
+		position: relative;
+
+		padding-left: 28px;
+
+		cursor: pointer;
+		text-decoration: underline;
+
+		color: $color-red;
+
+		line-height: 20px;
+		&:before{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+
+			width: 20px;
+			height: 20px;
+
+			content: "";
+
+			background: url("../../components/Main/images/edit-profile-icon.svg") no-repeat center center;
+			}
+		}
+
+	&__follow-wrapper{
+		position: relative;
+		left: 2px;
+
+		display: flex;
+		flex: 0 0 80.57%;
+		justify-content: space-between;
+
+		max-width: 80.57%;
+		margin-bottom: 24px;
+		}
+	&__follow-block{
+		text-align: center;
+		}
+	&__follow-number{
+		text-align: center;
+
+		color: #3e3f58;
+
+		font-size: 18px;
+		font-weight: bold;
+		line-height: 24px;
+		}
+	&__follow-title{
+		color: $color-follow-title;
+
+		font-size: 16px;
+		line-height: 24px;
+		}
+	&__description{
+		line-height: 150%;
+		}
+
+	&__report-wrapper{
+		position: absolute;
+		top: 0;
+		right: 38px;
+
+		width: 0;
+
+		}
+	&__report-toggle-button{
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+
+		width: 24px;
+		height: 24px;
+
+		cursor: pointer;
+		& span{
+			width: 4px;
+			height: 4px;
+
+			border-radius: 50%;
+			background-color: $color-black;
+			box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+			}
+		& span:not(:first-child){
+			margin-top: 2px;
+			}
+		}
+	&__report-list{
+		position: relative;
+		top: 17px;
+
+		visibility: hidden;
+
+		width: max-content;
+		padding: 24px 0;
+
+		transition: visibility 0.1s linear;
+
+		border-radius: 8px;
+		background-color: rgba(255, 255, 255, 0.94);
+		&--open{
+			visibility: visible;
+			}
+		}
+
+	&__report-link{
+		position: relative;
+
+		display: block;
+
+		padding: 8px 23px 8px 60px;
+
+		font-weight: 600;
+		line-height: 22px;
+		&:before{
+			position: absolute;
+			top: 50%;
+			left: 24px;
+
+			width: 20px;
+			height: 20px;
+
+			content: "";
+			transform: translateY(-50%);
+			}
+		&[alt^="Report"]{
+			&:before{
+				background: url("../../components/Main/images/icon_report.svg") no-repeat center;
+				}
+			}
+		&[alt^="Block"]{
+			&:before{
+				background: url("../../components/Main/images/icon_block.svg") no-repeat center;
+				}
+			}
+		&:hover{
+			background-color: $color-main-background;
+			}
+		}
+	}
