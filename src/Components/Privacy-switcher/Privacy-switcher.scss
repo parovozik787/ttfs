@@ -1,1 +1,46 @@
-.privacy-switcher{  display: flex;  &__item{    font-size: 16px;    font-weight: 600;    line-height: 22px;  }  &__button{    position: relative;    width: 40px;    height: 24px;    margin-right: 30px;    margin-left: 30px;    cursor: pointer;    border: 3px solid $color-privacy-switcher;    border-radius: 20px;    background-color: $color-privacy-switcher;    & span{      position: absolute;      right: calc(100% - 18px);      width: 18px;      height: 18px;      transition: right 0.1s linear;      border-radius: 50%;      background-color: $color-white;    }    &--private{      border: 3px solid $color-red;      background-color: $color-red;      span{        right: 0;      }    }  }}
+.privacy-switcher {
+	display: flex;
+
+	&__item {
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 22px;
+		}
+
+	&__button {
+		position: relative;
+
+		width: 40px;
+		height: 24px;
+		margin-right: 30px;
+		margin-left: 30px;
+
+		cursor: pointer;
+
+		border: 3px solid $color-privacy-switcher;
+		border-radius: 20px;
+		background-color: $color-privacy-switcher;
+
+		& span {
+			position: absolute;
+			right: calc(100% - 18px);
+
+			width: 18px;
+			height: 18px;
+
+			transition: right 0.1s linear;
+
+			border-radius: 50%;
+			background-color: $color-white;
+			}
+
+		&--private {
+			border: 3px solid $color-red;
+			background-color: $color-red;
+
+			span {
+				right: 0;
+				}
+			}
+		}
+	}

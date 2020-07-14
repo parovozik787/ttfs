@@ -1,1 +1,15 @@
-.card-wrapper{  &__privacy-switcher{    position: relative;    top: 2px;    left: 9px;    margin-bottom: 8.03%;  }  &__card-box{    display: flex;    flex-wrap: wrap;    justify-content: space-between;  }}
+.card-wrapper {
+	&__privacy-switcher {
+		position: relative;
+		top: 2px;
+		left: 9px;
+
+		margin-bottom: 8.03%;
+		}
+
+	&__card-box {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		}
+	}
