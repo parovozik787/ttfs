@@ -1,0 +1,25 @@
+include images/icons
+
+article.card(class=customCardClass)
+  if (cardItem.shareTag || cardItem.shareInfo)
+    .card__header
+      if cardItem.shareTag
+        .card__share-info
+          | Shared to
+          span.card__share-tag= cardItem.shareTag
+      else
+        .card__share-info.card__share-info--weblink= cardItem.shareInfo
+  h2.card__title= cardItem.title
+  .card__footer
+    if cardItem.authorName
+      .card__author-box
+        .card__author-avatar
+        a.card__author-name(href="#", title=cardItem.authorName)= cardItem.authorName
+    if cardItem.shareLink
+      a.card__share-link(href="#", title=cardItem.shareLink)= cardItem.shareLink
+    if (cardItem.viewStats || cardItem.likeButton)
+      .card__stats-box
+        .card__view-stats= cardItem.viewStats
+        .card__like-stats
+          +icon-like
+          button.card__like-button= cardItem.likeButton

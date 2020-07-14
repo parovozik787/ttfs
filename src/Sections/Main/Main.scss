@@ -1,0 +1,92 @@
+.main-page{
+	padding-top: 72px;
+	padding-bottom: 72px;
+
+	background-color: $color-main-background;
+	&__container{
+		display: flex;
+		justify-content: space-between;
+		}
+	&__card-wrapper{
+		position: relative;
+
+		flex: 1 1 65.98%;
+
+		max-width: 65.98%;
+
+		}
+	&__user-block{
+		position: relative;
+
+		flex: 0 0 29.91%;
+
+		min-width: 290px;
+		margin-right: 4.1%;
+		}
+	&__card{
+		flex: 1 1 48.45%;
+
+		margin-bottom: 3.1%;
+		}
+	}
+
+
+@import "../../Components/User-block/User-block";
+@import "../../Components/Privacy-switcher/Privacy-switcher";
+@import "../../Components/Card-wrapper/Card-wrapper";
+@import "../../Components/Card/Card";
+
+
+
+
+@media (max-width: 992px) {
+	.main-page{
+		&__user-block{
+			.user-block{
+				&__profile{
+					flex-direction: column;
+
+					margin-bottom: 24px;
+					}
+				&__avatar-wrapper{
+					margin-right: 0;
+					margin-bottom: 10px;
+					}
+				}
+			}
+		&__card{
+			flex: 0 0 100%;
+			}
+		}
+
+	}
+
+@media (max-width: 767px){
+	.main-page{
+		&__container{
+			flex-direction: column;
+			}
+		&__card-wrapper{
+			flex: auto;
+
+			max-width: none;
+			}
+		&__user-block{
+			flex-basis: auto;
+
+			margin-right: 0;
+			margin-bottom: 30px;
+			.user-block__report-list{
+				left: -140px;
+				}
+			.user-block__follow-wrapper{
+				left: 0;
+
+				flex: none;
+
+				max-width: 400px;
+				}
+			}
+		}
+
+	}

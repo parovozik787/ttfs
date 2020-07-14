@@ -1,0 +1,29 @@
+include images/icons
+
+.profile-box(class=customProfileBoxClass)
+  .profile-box__user-data-wrapper
+    - var name = 'Arthur Wood';
+    a.profile-box__name(href="#", title="Profile link")= name
+    .profile-box__avatar
+      img(alt="Avatar", src="../../Components/Profile-box/images/avatar.png")
+    button.profile-box__arrow
+      +profile-arrow
+  .profile-box__links-container
+    -
+      var linkBoxList = [
+          {
+              title: 'Notifications',
+              href: '#'
+          },
+          {
+              title: 'Gift',
+              href: '#'
+          },
+          {
+              title: 'Medium',
+              href: '#'
+          },
+      ]
+    each linkBoxItem in linkBoxList
+      .profile-box__link-box
+        a(href=linkBoxItem.href, title=linkBoxItem.title)
