@@ -1,0 +1,36 @@
+- var customPrivacySwitcherClass = 'card-wrapper__privacy-switcher';
+- var customCardClass = 'main-page__card';
+.card-wrapper(class=customCardWrapperClass)
+  include ../Privacy-switcher/Privacy-switcher
+  .card-wrapper__card-box
+    -
+      var cardList = [
+          {
+              title: 'New air routes that promise cheap flights in',
+              authorName: 'Gregory Watkins',
+              shareLink: 'Share',
+          },
+          {
+              title: 'New air routes that promise cheap flights in',
+              authorName: 'Gregory Watkins',
+              shareLink: 'Share',
+          },
+          {
+              shareTag: '#discussionaboutanimgttddsttddsdfsasfadsfasdfasdfssafsdfdf',
+              shareInfo: 'Shared via weblink',
+              title: 'New air routes that promise cheap flights in',
+              authorName: 'Gregory Watkins',
+              viewStats: '88',
+              likeButton: '24'
+          },
+          {
+              shareInfo: 'Shared via weblink',
+              title: 'New air routes that promise cheap flights in',
+              authorName: 'Gregory Watkins',
+              viewStats: '88',
+              likeButton: '24'
+          },
+
+      ]
+    each cardItem in cardList
+      include ../../Components/Card/Card

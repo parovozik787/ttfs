@@ -1,0 +1,25 @@
+nav.nav(class=customNavClass)
+  ul.nav__list
+    -
+      var navList = [
+          {
+              title: 'Feed',
+              navLink: '#',
+              classActiveLink: 'nav__link--active'
+          },
+          {
+              title: 'Explore',
+              navLink: '#'
+          },
+          {
+              title: 'Discussions',
+              navLink: '#'
+          },
+
+      ]
+    each navItem in navList
+      li
+        a.nav__link(class=navItem.classActiveLink)(
+          href=navItem.navLink,
+          title=navItem.title
+        )= navItem.title

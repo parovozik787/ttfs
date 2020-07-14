@@ -1,4 +1,4 @@
-export const Main = () => {
+export const reportToggle = () => {
   const btnMenu = document.querySelector(".user-block__report-toggle-button");
   const menu = document.querySelector(".user-block__report-list");
   const toggleMenu = function () {
@@ -21,13 +21,5 @@ export const Main = () => {
     if (!its_menu && !its_btnMenu && menu_is_active) {
       toggleMenu();
     }
-  });
-
-  const privacySwitcherButton = document.querySelector(
-    ".privacy-switcher__button"
-  );
-
-  privacySwitcherButton.addEventListener("click", () => {
-    privacySwitcherButton.classList.toggle("privacy-switcher__button--private");
   });
 };

@@ -1,0 +1,28 @@
+.header{
+	position: relative;
+
+	background: $color-white;
+	box-shadow: 0 12px 12px rgba(0, 0, 0, 0.06);
+	&__container{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		margin-bottom: 18px;
+		padding-top: 20px;
+		}
+	&__action-button{
+		position: absolute;
+		right: 15px;
+		bottom: -32px;
+		}
+	&__nav-container{
+		position: relative;
+		}
+	}
+
+
+@import "../../Components/Logo/Logo";
+@import "../../Components/Profile-box/Profile-box";
+@import "../../Components/Navigation/Navigation";
+@import "../../Components/Action-button/Action-button";

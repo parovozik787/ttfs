@@ -1,0 +1,48 @@
+.user-block(class=customUserBlockClass)
+  .user-block__profile
+    .user-block__avatar-wrapper
+      .user-block__avatar
+        img(
+          src="../../Components/User-block/images/profile-avatar.jpg",
+          alt="Profile avatar"
+        )
+    .user-block__info
+      - var name = 'Benjamin Clementine';
+      - var nickname = '@benclementine';
+      h2.user-block__name= name
+      a.user-block__nickname(href="#", title="Nickname")= nickname
+      a.user-block__edit-profile-link(href="#", title="Edit Profile")
+        | Edit Profile
+  .user-block__follow-wrapper
+    -
+      var followBlockList = [
+          {
+              number: '45',
+              title: 'synths'
+          },
+          {
+              number: '110',
+              title: 'followers'
+          },
+          {
+              number: '322',
+              title: 'following'
+          },
+      ]
+    each followBlockListItem in followBlockList
+      .user-block__follow-block
+        .user-block__follow-number= followBlockListItem.number
+        .user-block__follow-title= followBlockListItem.title
+
+  p.user-block__description
+    | Cryptocurrencies including Ethereum, Ripple, and Litecoin have all plunged between 20 to 30 percent each, according to CoinMarketCap. Here is the latest Ripple price news and live updates on XRP, bitcoin and Ethereum.
+  .user-block__report-wrapper
+    .user-block__report-toggle-button
+      span
+      span
+      span
+    ul.user-block__report-list
+      li.user-block__report-list-item
+        a.user-block__report-link(href="#", title="Report User") Report User
+      li.user-block__report-list-item
+        a.user-block__report-link(href="#", title="Block User") Block User

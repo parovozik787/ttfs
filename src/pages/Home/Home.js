@@ -1,8 +1,10 @@
 import "./Home.scss";
-import { Header } from "../../components/Header/Header";
-import { Main } from "../../components/Main/Main";
-// import { Footer } from "../../components/Footer/Footer";
-//
-Header();
-Main();
-// Footer();
+import { Header } from "../../Sections/Header/Header";
+import { privacySwitcher } from "../../Components/Privacy-switcher/Privacy-switcher";
+import { reportToggle } from "../../Components/User-block/User-block";
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  Header();
+  privacySwitcher();
+  reportToggle();
+});
