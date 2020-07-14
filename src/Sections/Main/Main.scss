@@ -3,7 +3,6 @@
 	padding-bottom: 72px;
 
 	background-color: $color-main-background;
-
 	&__container {
 		display: flex;
 		justify-content: space-between;
@@ -17,7 +16,6 @@
 		max-width: 65.98%;
 
 		}
-
 	&__user-block {
 		position: relative;
 
@@ -26,7 +24,6 @@
 		min-width: 290px;
 		margin-right: 4.1%;
 		}
-
 	&__card {
 		flex: 1 1 48.45%;
 
@@ -50,14 +47,12 @@
 
 					margin-bottom: 24px;
 					}
-
 				&__avatar-wrapper {
 					margin-right: 0;
 					margin-bottom: 10px;
 					}
 				}
 			}
-
 		&__card {
 			flex: 0 0 100%;
 			}
@@ -76,13 +71,11 @@
 
 			max-width: none;
 			}
-
 		&__user-block {
 			flex-basis: auto;
 
 			margin-right: 0;
 			margin-bottom: 30px;
-
 			.user-block__report-list {
 				left: -140px;
 				}

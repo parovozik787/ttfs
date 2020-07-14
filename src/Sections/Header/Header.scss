@@ -3,7 +3,6 @@
 
 	background: $color-white;
 	box-shadow: 0 12px 12px rgba(0, 0, 0, 0.06);
-
 	&__container {
 		display: flex;
 		align-items: center;
@@ -12,13 +11,11 @@
 		margin-bottom: 18px;
 		padding-top: 20px;
 		}
-
 	&__action-button {
 		position: absolute;
 		right: 15px;
 		bottom: -32px;
 		}
-
 	&__nav-container {
 		position: relative;
 		}
