@@ -14,4 +14,5 @@ yarn && yarn start
 (Have 95 for Accessibility because of: contrast ratio in navigation and the same id in inline svg)
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/parovozik787/ttfs/blob/master/LICENSE)
